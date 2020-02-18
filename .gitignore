@@ -1,4 +1,5 @@
 .ipynb_checkpoints/
 __MACOSX/
 processed_celeba_small/
-.gitingore
+creative_gan/
+.vscode
