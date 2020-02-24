@@ -3,3 +3,5 @@ __MACOSX/
 processed_celeba_small/
 creative_gan/
 .vscode
+.idea/
+venv/
