@@ -1,7 +1,9 @@
 .ipynb_checkpoints/
 __MACOSX/
-processed_celeba_small/
+processed-celeba-small/
 creative_gan/
 .vscode
 .idea/
 venv/
+__pycache__/
+food-cakes/
