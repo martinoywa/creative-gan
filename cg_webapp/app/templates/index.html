@@ -31,38 +31,38 @@
       <div class="gallery" id="gallery">
 
   <!-- Grid column -->
-      <div class="mb-3 pics animation all 2">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" alt="Card image cap">
+      <div class="pics">
+        <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/2.jpg') }}">
       </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
-      <div class="mb-3 pics animation all 1">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" alt="Card image cap">
+      <div class="pics">
+    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/3.jpg') }}" alt="Card image cap">
     </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
-    <div class="mb-3 pics animation all 1">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" alt="Card image cap">
+    <div class="pics">
+    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/5.jpg') }}" alt="Card image cap">
     </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
-  <div class="mb-3 pics animation all 2">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
+  <div class="pics">
+    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/7.jpg') }}">
   </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
-  <div class="mb-3 pics animation all 2">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
+  <div class="pics">
+    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/10.jpg') }}">
   </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
-  <div class="mb-3 pics animation all 1">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card image cap">
+  <div class="pics">
+    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/12.jpg') }}" alt="Card image cap">
   </div>
   <!-- Grid column -->
 
@@ -73,7 +73,9 @@
 <hr>
   <div class="container">
     <div>
-      <button id="generate" href="#"> Generate Image</button>
+      <form method="POST">
+        <button id="generate" type="submit"> Generate Image</button>
+      </form>
     </div>
     <div id="generated" >
       <h3><b>generated image</b></h3>
@@ -86,6 +88,7 @@
   </div>
   <div class="container">
     <div id="generated">
+      <p>{{ latent_vector }}</p>
       <button><b>DOWNLOAD</b></button>
     </div>
   </div>
@@ -102,7 +105,6 @@
       </div>
 
   </footer>
-  <script src="{{ url_for('static', filename='js/main.js') }}">
 
   </script>
   </body>
