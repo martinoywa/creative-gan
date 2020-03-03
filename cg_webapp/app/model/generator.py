@@ -63,8 +63,8 @@ G.apply(weights_init)
 
 
 # loading the trained model
-chechpoint = Path('app/model/checkpoints/generator_face.pt')
-G.load_state_dict(torch.load('generator_cars.pt', map_location='cpu'))
+checkpoint = Path('app/model/checkpoints/generator_face.pt')
+G.load_state_dict(torch.load(checkpoint, map_location='cpu'))
 
 
 def generator(latent_vector):
