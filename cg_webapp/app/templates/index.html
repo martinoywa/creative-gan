@@ -7,9 +7,7 @@
 	<meta name="keywords" content="web design, affordable web design, professional web design">
   	<meta name="author" content="Brad Traversy">
     <title>Creative GAN| Welcome</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,9 +18,9 @@
           </div>
           <nav>
             <ul>
-              <li class="current"><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="help.html">help</a></li>
+              <li class="current"><a href="{{ url_for('main.home') }}">Home</a></li>
+              <li><a href="{{ url_for('main.about') }}">About</a></li>
+              <li><a href="{{ url_for('main.help') }}">help</a></li>
             </ul>
           </nav>
         </div>
@@ -83,7 +81,7 @@
   </div>
   <div class="container">
     <div>
-      <img id="generated" src="img/portfolio/13.jpg" alt="">
+      <img id="generated" src="{{ url_for('static', filename='img/portfolio/13.jpg') }}" alt="">
       </div>
   </div>
   <div class="container">
@@ -104,7 +102,7 @@
       </div>
 
   </footer>
-  <script src="./JS/main.js">
+  <script src="{{ url_for('static', filename='js/main.js') }}">
 
   </script>
   </body>

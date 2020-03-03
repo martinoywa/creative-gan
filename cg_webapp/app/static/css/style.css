@@ -81,9 +81,10 @@ body{
   }
 
 /*gallery*/
-#generated-images{
-  height:50%;
+.img-fluid{
+  max-height: 300px;
 }
+
 .gallery {
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -93,10 +94,7 @@ body{
   column-width: 33%; 
   background-color: rgb(206, 206, 206);
 }
-  .gallery .pics {
-  -webkit-transition: all 350ms ease;
-  transition: all 350ms ease;
-  }
+
 #generated{
   float:right;
   width: 40%;
@@ -112,7 +110,7 @@ body{
     width: 100%;    
 }
 .footer {
-	background: #002147;
+	background:#35424a;
   height: auto;
   color: #fff;
 	padding-bottom: 30px;
