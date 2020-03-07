@@ -1,7 +1,8 @@
 from flask import Blueprint, render_template, request
 import torch
 from .model.generator import generator
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 main = Blueprint('main', __name__)
@@ -15,10 +16,11 @@ def home():
     if request.method == 'POST':
         latent_vector = torch.randn(1, 100, 1, 1)
         image = generator(latent_vector).numpy()[0].transpose(1, 2, 0)
-        #plt.savefig()
-        #img = cv2.imwrite('../generated/gen.png', image)
+        # image values between [-1..1], converting to [0..1]/[0..255] 
+        image = ((image + 1)*255 / (2)).astype(np.uint8)
+        plt.imsave('app/static/generated/gen.jpg', image)
 
-        return render_template('index.html', image_name=image)
+        return render_template('index.html')
 
 
 @main.route('/about')

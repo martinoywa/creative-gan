@@ -32,7 +32,7 @@
 
   <!-- Grid column -->
       <div class="pics">
-        <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/2.jpg') }}">
+        <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/2.png') }}">
       </div>
   <!-- Grid column -->
 
@@ -83,7 +83,7 @@
   </div>
   <div class="container">
     <div>
-      <img id="generated" src="/{{ image_name }}" alt="">
+      <img id="generated" src="{{ url_for('static', filename='/generated/gen.png') }}" alt="Generate Image">
       </div>
   </div>
   <div class="container">
