@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Affordable and professional web design">
+	<meta name="keywords" content="web design, affordable web design, professional web design">
+  	<meta name="author" content="Brad Traversy">
+    <title>Creative GAN| Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div id="branding">
+            <h1><span class="highlight">Creative</span>GAN</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="{{ url_for('main.home') }}">Home</a></li>
+              <li class="current"><a href="{{ url_for('main.about') }}">About</a></li>
+              <li><a href="{{ url_for('main.help') }}">help</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <main>
+     <p>
+      Coming up with new designs can be quite an intensive process especially when you feel  like you can’t really think of anything  new, commonly referred to as designer’s block. Normally most people try to deal with this by going through a whole load of images online so as to get inspiration, but this has a downside in terms of time and money.
+      The vast knowledge of Deep Learning especially on the topic of Generative Adversarial Networks can be applied to help tackle this in a more efficient and inexpensive way.
+     </p>
+    </main>
+</body>
+</html>

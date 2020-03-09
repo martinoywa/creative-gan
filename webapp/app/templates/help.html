@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generative adversarial networks">
+	<meta name="keywords" content="GAN, creativeGAN">
+  	<meta name="author" content="Creative GAN">
+    <title>Creative GAN| Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div id="branding">
+            <h1><span class="highlight">Creative</span>GAN</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="{{ url_for('main.home') }}">Home</a></li>
+              <li><a href="{{ url_for('main.about') }}">About</a></li>
+              <li class="current"><a href="{{ url_for('main.help') }}">help</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <main>
+      <p>Help</p>
+    </main>
+</body>
+</html>
