@@ -63,7 +63,7 @@ G.apply(weights_init)
 
 
 # loading the trained model
-checkpoint = Path('app/model/checkpoints/generator_face.pt')
+checkpoint = Path('app/model/checkpoints/generator_cars.pt')
 G.load_state_dict(torch.load(checkpoint, map_location='cpu'))
 
 

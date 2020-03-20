@@ -7,9 +7,9 @@ body{
   
   /* Global*/
   .container{
-    width:80%;
+    width:90%;
     margin:auto;
-    overflow:hidden;
+    overflow: hidden;
   }
   
   ul{
@@ -82,16 +82,11 @@ body{
 
 /*gallery*/
 .img-fluid{
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .gallery {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  -webkit-column-width: 33%;
-  -moz-column-width: 33%;
-  column-width: 33%; 
+  column-count: 4; 
   background-color: rgb(206, 206, 206);
 }
 

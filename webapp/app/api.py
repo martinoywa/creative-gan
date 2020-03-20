@@ -18,7 +18,8 @@ def home():
         image = generator.generator(latent_vector).numpy()[0].transpose(1, 2, 0)
         # image values between [-1..1], converting to [0..1]/[0..255] 
         image = ((image + 1)*255 / (2)).astype(np.uint8)
-        plt.imsave('app/static/generated/gen.png', image)
+        print(image)
+        plt.imsave('app/static/generated/gen.jpg', image)
 
         return render_template('index.html')
 

@@ -32,49 +32,58 @@
 
   <!-- Grid column -->
       <div class="pics">
-        <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/2.png') }}">
+        <img class="img-fluid" height="400" width="400" src="{{ url_for('static', filename='img/portfolio/2.png') }}">
       </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
       <div class="pics">
-    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/3.jpg') }}" alt="Card image cap">
+    <img class="img-fluid" height="400" width="400" src="{{ url_for('static', filename='img/portfolio/3.jpg') }}" alt="Card image cap">
     </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
     <div class="pics">
-    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/5.jpg') }}" alt="Card image cap">
+    <img class="img-fluid" height="400" width="400" src="{{ url_for('static', filename='img/portfolio/5.png') }}" alt="Card image cap">
     </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
   <div class="pics">
-    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/7.jpg') }}">
+    <img class="img-fluid" height="400" width="400" src="{{ url_for('static', filename='img/portfolio/7.png') }}">
   </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
   <div class="pics">
-    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/10.jpg') }}">
+    <img class="img-fluid" height="400" width="400" src="{{ url_for('static', filename='img/portfolio/10.jpg') }}">
   </div>
   <!-- Grid column -->
 
   <!-- Grid column -->
   <div class="pics">
-    <img class="img-fluid" src="{{ url_for('static', filename='img/portfolio/12.jpg') }}" alt="Card image cap">
+    <img class="img-fluid" height="400" width="400" src="{{ url_for('static', filename='img/portfolio/12.jpg') }}" alt="Card image cap">
   </div>
   <!-- Grid column -->
+  
+  <!-- Grid column -->
+  <div class="pics">
+    <img class="img-fluid" height="400" width="400" src="{{ url_for('static', filename='img/portfolio/12.jpg') }}" alt="Card image cap">
+    </div>
+  <!-- Grid column -->
 
+  <!-- Grid column -->
+  <div class="pics">
+    <img class="img-fluid" height="400" width="400" src="{{ url_for('static', filename='img/portfolio/7.png') }}">
   </div>
-  <!-- Grid row -->
+  </div>
 </section>
 <br>
 <hr>
   <div class="container">
     <div>
       <form method="POST">
-        <button id="generate" type="submit"> Generate Image</button>
+        <button id="generate" type="submit" onclick="window.loaction.reload();"> Generate Image</button>
       </form>
     </div>
     <div id="generated" >
@@ -83,7 +92,7 @@
   </div>
   <div class="container">
     <div>
-      <img id="generated" src="{{ url_for('static', filename='/generated/gen.png') }}" alt="Generate Image">
+      <img class="gen_button" id="generated" src="{{ url_for('static', filename='/generated/gen.jpg') }}" alt="Generate Image">
       </div>
   </div>
   <div class="container">
@@ -104,6 +113,15 @@
       </div>
 
   </footer>
+
+  <script>
+
+    const refreshOnClick = document.querySelector('.gen_button');
+    const refreshPage = () => {
+      location.reload();
+    }
+
+    refreshOnClick.addEventListener('click', refreshPage);
 
   </script>
   </body>
