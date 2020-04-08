@@ -63,11 +63,11 @@ G.apply(weights_init)
 
 
 # loading the trained model
-checkpoint = Path('app/model/checkpoints/generator_cars.pt')
+checkpoint = Path('app/model/checkpoints/generator_face.pt')
 G.load_state_dict(torch.load(checkpoint, map_location='cpu'))
 
 
-def generator(latent_vector):
+def generate(latent_vector):
     # fake image
     fake = G(latent_vector).detach().cpu()
 

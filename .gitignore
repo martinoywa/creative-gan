@@ -7,3 +7,4 @@ creative_gan/
 venv/
 __pycache__/
 food-cakes/
+generated/
