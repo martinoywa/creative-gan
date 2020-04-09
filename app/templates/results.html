@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<div class="container">
+  </div>
+  <div class="container">
+    <div>
+      <img class="gen_button" id="generated" src="{{ url_for('static', filename='generated/'+filename) }}" alt="Generate Image">
+      </div>
+  </div>
+  <div class="container">
+    <div id="generated">
+      <button><b>DOWNLOAD</b></button>
+    </div>
+</div>
+
+{% endblock %}
