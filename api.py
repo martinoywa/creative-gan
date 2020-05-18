@@ -13,7 +13,7 @@ from random import randint
 app = Flask(__name__)
 
 # configuration
-app.config["GENERATED_FOLDER"] = "app/static/generated/"
+app.config["GENERATED_FOLDER"] = "static/generated/"
 
 if 'generated' not in os.listdir('app/static'):
     os.mkdir(app.config["GENERATED_FOLDER"])
