@@ -3,7 +3,7 @@ import os
 from flask import Flask
 from flask import render_template, redirect, request
 import torch
-from model.generator import generate
+from models.generator import generate
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -15,7 +15,7 @@ app = Flask(__name__)
 # configuration
 app.config["GENERATED_FOLDER"] = "static/generated/"
 
-if 'generated' not in os.listdir('app/static'):
+if 'generated' not in os.listdir('static'):
     os.mkdir(app.config["GENERATED_FOLDER"])
 
 
