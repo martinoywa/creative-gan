@@ -9,3 +9,6 @@ __pycache__/
 food-cakes/
 generated/
 dcgan/
+bmw10_ims/
+cars_train/
+celeba/
