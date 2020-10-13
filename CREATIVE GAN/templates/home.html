@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./img/logo-01.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap" rel="stylesheet" />
+    <title>Creative||Gan</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        box-sizing: border-box;
+        font-family: 'Raleway', sans-serif;
+        /* //font-size: 16px; */
+        font-weight: 40rem;
+        line-height: 1.7;
+        background-color: #f7f7f7;
+        padding: 3rem 3rem 0 3rem;
+      }
+
+      /* HEADER */
+      .header {
+        height: 12vh;
+        /* background-color: #52AFAC;, #29E6E0 */
+        background-image: linear-gradient(to right, #52afac, #29e6e0);
+        /* -webkit-background-clip: text; */
+        border-radius: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header__box {
+        margin-left: 30px;
+      }
+
+      .header__img {
+        width: 10rem;
+      }
+
+      .header__heading {
+        font-size: 1.8rem;
+        color: rgb(10, 10, 10);
+        font-weight: 400;
+      }
+
+      .header__nav {
+        font-size: 1rem;
+        margin-right: 30px;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+
+      .nav-container {
+        display: flex;
+      }
+
+      .about {
+        margin-right: 10px;
+        color: #fff;
+      }
+
+      .help {
+        margin-right: 10px;
+      }
+
+      .link {
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+        color: #999;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+
+      /* section-main */
+      .section-main {
+        max-width: 120rem;
+        min-height: 50rem;
+        margin: 8rem auto;
+        background-color: #f7f7f7;
+      }
+
+      .container {
+        display: flex;
+        background-color: #f7f7f7;
+      }
+
+      .gallery {
+        background-color: inherit;
+        flex: 0 0 50%;
+        min-height: 50rem;
+      }
+
+      .Gallery__heading {
+        font-weight: 400;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 5rem;
+      }
+
+      .row {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-template-rows: repeat(2, 20rem);
+        grid-gap: 5rem;
+      }
+
+      .img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: all 0.5s;
+        backface-visibility: hidden;
+        /* width: 20rem;
+        height: 20rem; */
+        box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.199);
+      }
+
+      .img:hover {
+        transform: scale(1.05);
+      }
+
+      /* generator */
+      .generator {
+        background-color: inherit;
+        flex: 0 0 50%;
+        display: grid;
+
+        grid-template-columns: 1fr 10rem;
+        grid-row-gap: 3rem;
+        justify-items: center;
+        align-content: center;
+      }
+
+      .generator__heading {
+        font-weight: 400;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 5rem;
+
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+      }
+
+      .gen-img {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        border-radius: 5px;
+        width: 35rem;
+        height: 35rem;
+        /* width: 100%;
+        height: 100%; */
+        object-fit: cover;
+        display: block;
+        box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.199);
+      }
+
+      .img:hover {
+        transform: scale(1.05);
+        backface-visibility: hidden;
+      }
+
+      .btn {
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 10rem;
+        transition: all 0.2s;
+      }
+
+      .btn:active,
+      .btn:focus {
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(#000, 0.281);
+      }
+
+      .btn-generate {
+        /* background-color: #13CF7E; */
+        background-image: linear-gradient(to right, #13cf7e, #04ff92);
+        padding: 1.5rem 3rem;
+        font-size: 1.5rem;
+        margin-right: 3rem;
+        font-weight: 700;
+        color: #777;
+        align-self: center;
+        justify-self: center;
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+      }
+
+      .btn-download {
+        background-image: linear-gradient(to right, #cf1913, #eb4c4c);
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: 400;
+
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+      }
+
+      /* 
+      footer */
+      .footer {
+        /* background-color: #686565; */
+        background-image: linear-gradient(to right, #858080, #494545);
+        margin: 0 -3rem 0 -3rem;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .footer__text {
+        color: #fff;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <div class="header__box">
+          <a href="/"> <img class="header__img" src="./img/logo-01.png" alt="logo" /></a>
+        </div>
+        <div class="header__heading">
+          <h1>Creative Gan</h1>
+        </div>
+        <div class="header__nav">
+          <div class="nav-container">
+            <div class="about">
+              <a class="link" href="/about">about</a>
+            </div>
+            <div class="help">
+              <a class="link" href="/help">help</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section-main">
+      <div class="container">
+        <div class="gallery">
+          <h2 class="Gallery__heading">Generated Images Gallery</h2>
+          <div class="row">
+            <img class="img" src="https://dog.ceo/api/breeds/image/random" alt="img-1" />
+
+            <img class="img" src="https://dog.ceo/api/breeds/image/random" alt="img-2" />
+
+            <img class="img" src="https://dog.ceo/api/breeds/image/random" alt="img-3" />
+
+            <img class="img" src="https://dog.ceo/api/breeds/image/random" alt="img-4" />
+          </div>
+        </div>
+        <div class="generator">
+          <h2 class="generator__heading">Image Generator</h2>
+          <button class="btn btn--green btn-generate">Generate</button>
+          <img class="gen-img" src="https://dog.ceo/api/breeds/image/random" alt="gen-img" />
+          <button class="btn-download btn">download</button>
+        </div>
+      </div>
+    </section>
+    <div class="footer">
+      <h3 class="footer__text">Copyright &copy2020 CreativeGan. All rights reserved.</h3>
+    </div>
+  </body>
+</html>
