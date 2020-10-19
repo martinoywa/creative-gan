@@ -4,10 +4,9 @@ from flask import Flask
 from flask import render_template, redirect, request
 import torch
 from models.generator import generate
-import matplotlib.pyplot as plt
-import numpy as np
-
 from random import randint
+
+from torchvision import utils
 
 
 app = Flask(__name__)
@@ -21,7 +20,7 @@ if 'generated' not in os.listdir('static'):
 
 def generate_image(latent_vector):
     if latent_vector != None:
-        image = generate(latent_vector).numpy()[0].transpose(1, 2, 0)
+        image = generate(latent_vector)
         return image
     else:
         return False
@@ -33,13 +32,15 @@ def home():
         return render_template("index.html")
 
     if request.method == "POST":
-        latent_vector = torch.randn(1, 100, 1, 1)
+        latent_vector = torch.randn(64, 100, 1, 1)
 
         fake = generate_image(latent_vector)
-        if fake.any():
+        print(fake.shape)
+
+        if fake.numpy().any():
             filename = "generated_image"+str(randint(1, 1000000000))+".png"
-            plt.imsave(os.path.join(app.config["GENERATED_FOLDER"], filename),
-                        ((fake + 1)*255 / (2)).astype(np.uint8))
+            utils.save_image(utils.make_grid(fake, padding=2).cpu(), os.path.join(app.config["GENERATED_FOLDER"],
+                                                                                  filename))
         else:
             return redirect(request.url)
 
