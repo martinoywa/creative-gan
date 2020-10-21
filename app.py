@@ -6,7 +6,7 @@ import torch
 from models.generator import generate
 from random import randint
 
-from torchvision import utils
+from torchvision import utils, transforms
 
 
 app = Flask(__name__)
@@ -26,6 +26,11 @@ def generate_image(latent_vector):
         return False
 
 
+def unnormalize_image(fake_image):
+    fake_image = fake_image / 2 + 0.5
+    return fake_image
+
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "GET":
@@ -35,12 +40,11 @@ def home():
         latent_vector = torch.randn(64, 100, 1, 1)
 
         fake = generate_image(latent_vector)
-        print(fake.shape)
 
         if fake.numpy().any():
             filename = "generated_image"+str(randint(1, 1000000000))+".png"
-            utils.save_image(utils.make_grid(fake, padding=2).cpu(), os.path.join(app.config["GENERATED_FOLDER"],
-                                                                                  filename))
+            utils.save_image(utils.make_grid(unnormalize_image(fake), padding=2).cpu(),
+                             os.path.join(app.config["GENERATED_FOLDER"], filename))
         else:
             return redirect(request.url)
 
