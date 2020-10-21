@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!DOCTYPE html>
 <div class="container">
   </div>
   <div class="container">
@@ -9,7 +8,10 @@
       <img class="gen-img" id="generated" src="{{ url_for('static', filename='generated/'+filename) }}" alt="gen-img">
       </div>
   </div>
-<button class="btn-download btn">download</button>
+<a href="{{ url_for('static', filename='generated/'+filename) }}" download>
+  <button class="btn-download btn"><i class="fa fa-download"></i> download</button>
+</a>
+
 </div>
 
 {% endblock %}
