@@ -10,7 +10,7 @@ class TestGenerator(unittest.TestCase):
         Assert that checkpoint file exists
         :return: True if exists else False
         """
-        weights = Path('models/checkpoints/generator_cars.pt')
+        weights = Path('models/checkpoints/cars-0.0.6-Monday.pt')
         self.assertTrue(os.path.isfile(weights), True)
 
     def test_image_generation(self):
