@@ -79,6 +79,83 @@
             font-weight: 700;
             font-size: 1.5rem;
         }
+        #content2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 25px;
+            padding: 100px;
+            margin-top: 200px;
+        }
+
+        /* #Styling for the form */
+     .decor {
+      width: 50vw;
+      font-size: inherit;
+      padding: 20px;
+      text-align: center;
+      margin: 0 auto;
+      font-family: inherit;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 2rem;
+      align-content: center;
+      justify-items: center;
+      border-radius: 5rem;
+      background-color: #f7f7f7;
+      }
+
+      input {
+      width: calc(50% - 10px);
+      padding: 5px;
+      border-radius: 5rem;
+      border: 1px solid #ccc;
+      vertical-align: middle;
+      }
+      input:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+}
+      textarea {
+      width: calc(50% - 6px);
+      }
+
+      .btn {
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 10rem;
+        transition: all 0.2s;
+
+        background-image: linear-gradient(to right, #448cf7, #216dc4);
+        padding: 1.5rem 3rem;
+        font-size: 1.5rem;
+      }
+
+      .btn:active,
+      .btn:focus {
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(#000, 0.281);
+      }
+
+      #content2{
+        font-weight: 400;
+      }
+
+      .mb-sm{
+          margin-bottom: 2rem;
+      }
+
+      /* about container */
+    .about_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        justify-items: center;
+        align-content: center;
+    }
+
     </style>
 </head>
 
@@ -101,8 +178,24 @@
         </div>
     </header>
     <main>
+<div class="about_container">
+        <div id="content2">
+                <h5 class="mb-sm">Site Navigation</h5>
+                <p>The download button helps you download images to your local images</p>
+                <p>you can download from the already generated images</p>
+                <p>The generate button helps creates new unique images.</p>
+                <p>Generate new images.</p>
+                <p>For queries or comments about your experience on the websiote fill in the contact form below.</p>
+            </div>
+            <form action="/" class="decor">
+                      <h1>Contact us</h1>
+                      <input type="email" placeholder="Email">
+                      <textarea placeholder="Message..." rows="5"></textarea>
+                      <button class="btn" type="submit" href="/">Submit</button>
+                    </div>
+             </form>
+</div>
 
-    </main>
 </body>
 
 </html>
