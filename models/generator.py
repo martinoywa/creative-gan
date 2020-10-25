@@ -9,8 +9,6 @@ nc = 3
 nz = 100
 # Size of feature maps in generator
 ngf = 64
-# Size of feature maps in discriminator
-ndf = 64
 
 
 class Generator(nn.Module):
@@ -63,12 +61,13 @@ G.apply(weights_init)
 
 
 # loading the trained model
-checkpoint = Path('models/checkpoints/generator_face.pt')
+checkpoint = Path('models/checkpoints/cars-0.0.6-Monday.pt')
 G.load_state_dict(torch.load(checkpoint, map_location='cpu'))
 
 
 def generate(latent_vector):
     # fake image
-    fake = G(latent_vector).detach().cpu()
+    with torch.no_grad():
+        fake = G(latent_vector)#.detach().cpu()
 
     return fake
