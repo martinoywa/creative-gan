@@ -36,6 +36,6 @@ six==1.14.0
 torch==1.6.0+cpu
 -f https://download.pytorch.org/whl/torch_stable.html
 torchvision==0.7.0+cpu
-urllib3==1.25.8
+urllib3==1.26.5
 webencodings==0.5.1
 Werkzeug==1.0.1
